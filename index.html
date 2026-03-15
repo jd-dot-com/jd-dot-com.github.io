@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jody Dawkins | Musician & Composer</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#0B0C10',
+                            gray: '#1F2833',
+                            light: '#C5C6C7',
+                            cyan: '#66FCF1',
+                            teal: '#45A29E',
+                            pink: '#FF007F',
+                            yellow: '#FCE205'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Bebas Neue', 'cursive'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0B0C10;
+            color: #C5C6C7;
+            overflow-x: hidden;
+        }
+        ::selection {
+            background: #FF007F;
+            color: #0B0C10;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header Navigation -->
+    <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 backdrop-blur-md bg-brand-dark/80 px-6 py-4 border-b border-brand-cyan/20">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="#" class="font-heading text-4xl text-brand-cyan uppercase tracking-wider hover:text-brand-pink transition-colors">Jody Dawkins</a>
+            
+            <nav class="hidden md:flex gap-8">
+                <a href="#music" class="font-bold text-sm tracking-widest uppercase hover:text-brand-cyan transition-colors">Music</a>
+                <a href="#services" class="font-bold text-sm tracking-widest uppercase hover:text-brand-yellow transition-colors">Services</a>
+                <a href="#contact" class="font-bold text-sm tracking-widest uppercase hover:text-brand-pink transition-colors">Contact</a>
+            </nav>
+            
+            <!-- Mobile Menu Button -->
+            <button id="mobileMenuBtn" class="md:hidden text-brand-cyan p-2">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Nav Overlay -->
+    <div id="mobileMenu" class="fixed inset-0 z-40 bg-brand-dark/95 flex flex-col items-center justify-center gap-10 opacity-0 pointer-events-none transition-opacity duration-300">
+        <a href="#music" class="mobile-link font-heading text-5xl text-brand-light hover:text-brand-cyan transition-colors">Music</a>
+        <a href="#services" class="mobile-link font-heading text-5xl text-brand-light hover:text-brand-yellow transition-colors">Services</a>
+        <a href="#contact" class="mobile-link font-heading text-5xl text-brand-light hover:text-brand-pink transition-colors">Contact</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+        <!-- Abstract Background Placeholder (Can be replaced with artist photo) -->
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent to-brand-dark z-10"></div>
+            <!-- Temporary background pattern/image -->
+            <img src="https://images.unsplash.com/photo-1598387181032-a3103a2db5b3?q=80&w=2076&auto=format&fit=crop" 
+                 alt="Background" class="w-full h-full object-cover opacity-30 mix-blend-luminosity filter blur-sm scale-105" />
+            <!-- Animated Gradient Blob -->
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3/4 h-3/4 bg-brand-cyan/20 rounded-full blur-[100px] pointer-events-none"></div>
+            <div class="absolute top-1/3 left-1/4 w-1/2 h-1/2 bg-brand-pink/20 rounded-full blur-[120px] pointer-events-none"></div>
+        </div>
+
+        <div class="relative z-10 max-w-5xl mx-auto px-6 text-center">
+            <p class="hero-el text-brand-yellow font-bold tracking-[0.3em] uppercase mb-4 text-sm md:text-lg">Professional Musician & Composer</p>
+            <h1 class="hero-el font-heading text-7xl md:text-9xl lg:text-[10rem] leading-none text-white mb-6 uppercase tracking-tight drop-shadow-xl">
+                Jody <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-cyan to-brand-pink">Dawkins</span>
+            </h1>
+            <p class="hero-el text-xl md:text-3xl font-light mb-12 max-w-3xl mx-auto text-brand-light">
+                Elevating live performances, crafting soundscapes, and bringing the swagger.
+            </p>
+            
+            <div class="hero-el flex flex-col sm:flex-row gap-6 justify-center items-center">
+                <a href="#contact" class="px-8 py-4 bg-brand-yellow text-brand-dark font-heading text-2xl uppercase tracking-wider hover:bg-white hover:scale-105 transition-all w-full sm:w-auto text-center border-b-4 border-r-4 border-brand-dark">
+                    Book Now
+                </a>
+                <a href="#music" class="px-8 py-4 border-2 border-brand-cyan text-brand-cyan font-heading text-2xl uppercase tracking-wider hover:bg-brand-cyan hover:text-brand-dark transition-all w-full sm:w-auto text-center">
+                    Listen to Swagger's a Drug
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Wrapper -->
+    <main class="relative z-20 bg-brand-dark">
+        <!-- Music Section -->
+        <section id="music" class="py-32 px-6 border-t border-brand-gray relative">
+            <div class="max-w-7xl mx-auto flex flex-col items-center gap-16 lg:flex-row lg:items-center">
+                
+                <!-- Album Art Place Holder -->
+                <div class="music-art w-full max-w-lg lg:w-1/2 relative group">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-brand-pink to-brand-cyan rounded-lg blur opacity-50 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
+                    <img src="https://images.unsplash.com/photo-1614613535308-eb5fbd3d2c17?q=80&w=2070&auto=format&fit=crop" 
+                         alt="Swagger's a Drug Placeholder Art" class="relative rounded-lg shadow-2xl object-cover aspect-square w-full filter brightness-75 group-hover:brightness-100 transition-all"/>
+                    
+                    <div class="absolute inset-0 flex items-center justify-center p-8 bg-brand-dark/40 backdrop-blur-sm rounded-lg opacity-100 md:opacity-0 group-hover:opacity-100 transition-opacity">
+                        <span class="font-heading text-4xl sm:text-6xl text-brand-yellow uppercase tracking-widest text-center shadow-lg transform -rotate-12 italic border-8 border-brand-yellow p-4 bg-brand-dark/80">Coming Soon</span>
+                    </div>
+                </div>
+
+                <!-- Album Details -->
+                <div class="music-content w-full lg:w-1/2 flex flex-col items-start gap-8">
+                    <h2 class="text-brand-cyan font-bold tracking-[0.2em] uppercase text-sm border-b border-brand-cyan pb-2">Upcoming Release</h2>
+                    <h3 class="font-heading text-6xl md:text-8xl text-white uppercase leading-none">
+                        Swagger's a <br/><span class="text-brand-pink">Drug</span>
+                    </h3>
+                    <p class="text-lg text-brand-light max-w-xl font-light leading-relaxed">
+                        A high-octane blend of raw energy and polished production. 
+                        *Swagger's a Drug* represents the culmination of years of live performance experience distilled into a single, explosive studio album. 
+                        Get ready for anthemic hooks, heavy grooves, and undeniable attitude.
+                    </p>
+                    
+                    <ul class="text-brand-gray text-sm md:text-md space-y-3 font-mono tracking-wider">
+                        <li class="flex items-center gap-4"><span class="text-brand-yellow">#01</span> / THE INTRODUCTION (TBA)</li>
+                        <li class="flex items-center gap-4"><span class="text-brand-yellow">#02</span> / LIQUID GOLD</li>
+                        <li class="flex items-center gap-4"><span class="text-brand-yellow">#03</span> / SWAGGER'S A DRUG</li>
+                        <li class="flex items-center gap-4 opacity-50">...and more</li>
+                    </ul>
+
+                    <button class="mt-4 px-10 py-5 bg-transparent border-2 border-brand-pink text-brand-pink font-heading text-3xl uppercase tracking-wider hover:bg-brand-pink hover:text-white transition-all transform hover:-translate-y-1 hover:shadow-[0_10px_0_0_rgba(255,0,127,0.5)] active:translate-y-0 active:shadow-none">
+                        Pre-Save Project
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-32 px-6 bg-brand-gray/10 border-t border-brand-gray relative overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <div class="absolute bottom-0 right-0 w-[80vw] h-[80vw] bg-brand-cyan/5 rounded-[40%] blur-[120px] pointer-events-none"></div>
+            </div>
+            
+            <div class="max-w-7xl mx-auto relative z-10">
+                <div class="text-center mb-24">
+                    <h2 class="font-heading text-8xl md:text-[8rem] text-transparent bg-clip-text bg-gradient-to-r from-brand-yellow to-brand-pink uppercase tracking-tight leading-none mb-6 drop-shadow-lg">
+                        What I <br/><span class="text-white">Bring</span>
+                    </h2>
+                    <p class="text-lg md:text-2xl text-brand-light font-light max-w-2xl mx-auto">
+                        Whether you need a stage commander, a session pro, or original music for your project, let's make it hit hard.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+                    <!-- Venue Service Card -->
+                    <div class="service-card group w-full bg-brand-dark border-4 border-brand-gray hover:border-brand-cyan p-10 flex flex-col items-center text-center transition-all duration-300 hover:-translate-y-4">
+                        <div class="w-24 h-24 rounded-full bg-brand-cyan/20 flex items-center justify-center mb-8 group-hover:bg-brand-cyan group-hover:scale-110 transition-all">
+                            <span class="font-heading text-5xl text-brand-cyan group-hover:text-brand-dark">01</span>
+                        </div>
+                        <h3 class="font-heading text-4xl text-white uppercase tracking-wider mb-4">Venues</h3>
+                        <p class="text-brand-light font-light text-lg mb-8 opacity-80 group-hover:opacity-100 transition-opacity flex-grow">
+                            Booking original acts or cover bands. I deliver a high-energy performance guaranteed to captivate and keep your crowd hyped.
+                        </p>
+                        <a href="#contact" class="font-bold text-brand-cyan uppercase tracking-widest border-b-2 border-brand-cyan pb-1 hover:text-white hover:border-white transition-colors">Book a show</a>
+                    </div>
+
+                    <!-- Band Service Card -->
+                    <div class="service-card group w-full bg-brand-dark border-4 border-brand-gray hover:border-brand-yellow p-10 flex flex-col items-center text-center transition-all duration-300 hover:-translate-y-4">
+                        <div class="w-24 h-24 rounded-full bg-brand-yellow/20 flex items-center justify-center mb-8 group-hover:bg-brand-yellow group-hover:scale-110 transition-all">
+                            <span class="font-heading text-5xl text-brand-yellow group-hover:text-brand-dark">02</span>
+                        </div>
+                        <h3 class="font-heading text-4xl text-white uppercase tracking-wider mb-4">Bands</h3>
+                        <p class="text-brand-light font-light text-lg mb-8 opacity-80 group-hover:opacity-100 transition-opacity flex-grow">
+                            Need a pro player for the studio or tour? Fast learner, serious groove, and unmistakable presence on stage.
+                        </p>
+                        <a href="#contact" class="font-bold text-brand-yellow uppercase tracking-widest border-b-2 border-brand-yellow pb-1 hover:text-white hover:border-white transition-colors">Hire for Session</a>
+                    </div>
+
+                    <!-- Director Service Card -->
+                    <div class="service-card group w-full bg-brand-dark border-4 border-brand-gray hover:border-brand-pink p-10 flex flex-col items-center text-center transition-all duration-300 hover:-translate-y-4">
+                        <div class="w-24 h-24 rounded-full bg-brand-pink/20 flex items-center justify-center mb-8 group-hover:bg-brand-pink group-hover:scale-110 transition-all">
+                            <span class="font-heading text-5xl text-brand-pink group-hover:text-brand-dark">03</span>
+                        </div>
+                        <h3 class="font-heading text-4xl text-white uppercase tracking-wider mb-4">Directors</h3>
+                        <p class="text-brand-light font-light text-lg mb-8 opacity-80 group-hover:opacity-100 transition-opacity flex-grow">
+                            Need custom sync tracks? Aggressive, bold cinematic sound design and high-energy cues for media, film, and games.
+                        </p>
+                        <a href="#contact" class="font-bold text-brand-pink uppercase tracking-widest border-b-2 border-brand-pink pb-1 hover:text-white hover:border-white transition-colors">License Music</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-32 px-6 border-t-8 border-brand-cyan relative bg-brand-dark">
+            <div class="max-w-4xl mx-auto rounded-lg bg-brand-gray/30 backdrop-blur-md p-10 md:p-20 relative overflow-hidden shadow-2xl">
+                <!-- Glitch decorative elements -->
+                <div class="absolute top-0 right-0 w-32 h-32 bg-brand-yellow/10 pointer-events-none transform -skew-y-12 translate-x-12 -translate-y-12"></div>
+                <div class="absolute bottom-0 left-0 w-64 h-64 bg-brand-pink/10 pointer-events-none transform rotate-45 -translate-x-32 translate-y-32"></div>
+
+                <div class="text-center mb-16 relative z-10">
+                    <h2 class="font-heading text-6xl md:text-8xl text-white uppercase tracking-tight mb-4 drop-shadow-lg">
+                        Drop a <span class="text-brand-cyan">Line</span>
+                    </h2>
+                    <p class="text-xl text-brand-light font-light max-w-lg mx-auto">
+                        Ready to make some noise? Fill out the form and I'll get back to you fast. 
+                    </p>
+                </div>
+
+                <form class="contact-form relative z-10 flex flex-col gap-6" action="https://formspree.io/f/mqakezyw" method="POST">
+                    <!-- Note: mqakezyw is a dummy hash. User will need to replace it with their real Formspree endpoint -->
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <div class="w-full">
+                            <label class="block text-brand-yellow font-bold uppercase tracking-widest text-sm mb-2" for="name">Name</label>
+                            <input class="w-full bg-brand-dark border-2 border-brand-gray text-white p-4 focus:outline-none focus:border-brand-cyan transition-colors" type="text" id="name" name="name" required placeholder="Who are you?">
+                        </div>
+                        <div class="w-full">
+                            <label class="block text-brand-yellow font-bold uppercase tracking-widest text-sm mb-2" for="email">Email</label>
+                            <input class="w-full bg-brand-dark border-2 border-brand-gray text-white p-4 focus:outline-none focus:border-brand-cyan transition-colors" type="email" id="email" name="_replyto" required placeholder="your.name@email.com">
+                        </div>
+                    </div>
+
+                    <div class="w-full">
+                        <label class="block text-brand-yellow font-bold uppercase tracking-widest text-sm mb-2" for="inquiryType">I'm a...</label>
+                        <select class="w-full bg-brand-dark border-2 border-brand-gray text-brand-light p-4 focus:outline-none focus:border-brand-cyan transition-colors appearance-none" id="inquiryType" name="inquiryType">
+                            <option value="Venue">Venue / Promoter</option>
+                            <option value="Band">Band / Artist</option>
+                            <option value="Director">Music Director / Sync</option>
+                            <option value="Other">Fan / Other</option>
+                        </select>
+                    </div>
+
+                    <div class="w-full mb-4">
+                        <label class="block text-brand-yellow font-bold uppercase tracking-widest text-sm mb-2" for="message">Message</label>
+                        <textarea class="w-full bg-brand-dark border-2 border-brand-gray text-white p-4 h-48 focus:outline-none focus:border-brand-pink transition-colors resize-none" id="message" name="message" required placeholder="Let's build something loud..."></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full py-6 bg-brand-cyan text-brand-dark font-heading text-4xl uppercase tracking-wider hover:bg-white hover:scale-105 transition-all shadow-[0_10px_0_0_rgba(102,252,241,0.3)] active:translate-y-[5px] active:shadow-none mb-10">
+                        Send It
+                    </button>
+                    
+                    <!-- Formspree hidden fields -->
+                    <input type="hidden" name="_subject" value="New Inquiry from JodyDawkins.com">
+                </form>
+                
+                <!-- Social Links -->
+                <div class="mt-16 pt-8 border-t border-brand-gray/50 flex flex-col md:flex-row items-center justify-between gap-6 relative z-10">
+                    <p class="text-brand-light font-bold text-sm uppercase tracking-widest opacity-60">© 2026 Jody Dawkins</p>
+                    <div class="flex gap-8">
+                        <a href="#" class="text-brand-light hover:text-brand-pink transition-colors transform hover:scale-110">
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        </a>
+                        <a href="#" class="text-brand-light hover:text-brand-cyan transition-colors transform hover:scale-110">
+                            <!-- Spotify SVG Icon placeholder -->
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.6 0 12 0zm5.521 17.34c-.24.394-.756.52-1.15.28-3.153-1.926-7.119-2.361-11.805-1.294-.439.102-.888-.176-.99-.615-.103-.439.175-.888.614-.989 5.105-1.162 9.516-.653 13.045 1.498.397.24.524.757.286 1.12zm1.427-3.182c-.302.489-.922.651-1.411.35-3.606-2.215-9.13-2.872-13.623-1.505-.558.172-1.144-.144-1.315-.705-.172-.56.143-1.145.704-1.317 5.161-1.572 11.233-.853 15.297 1.644.49.301.653.923.348 1.412zm.172-3.34c-4.321-2.56-11.458-2.793-15.176-1.545-.668.224-1.385-.138-1.611-.806-.226-.667.138-1.385.806-1.61 4.256-1.432 12.115-1.173 17.07 1.769.605.358.802 1.14.444 1.745-.357.604-1.139.803-1.744.447z"/></svg>
+                        </a>
+                        <a href="#" class="text-brand-light hover:text-brand-yellow transition-colors transform hover:scale-110">
+                            <!-- Youtube SVG Icon placeholder -->
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- GSAP & Core Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
