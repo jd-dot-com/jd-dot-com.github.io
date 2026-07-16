@@ -1,0 +1,45 @@
+{
+  "issued_at": "2026-07-16T04:00:00Z",
+  "public_key": "gNhdiLJhE0NRL5BOnRV1Zi1wEGINqDLzR2329ikZk0c",
+  "services": [
+    {
+      "type": "Website",
+      "url": "https://jodydawkins.com"
+    },
+    {
+      "type": "Tidal",
+      "url": "https://tidal.com/artist/20195859"
+    },
+    {
+      "type": "Spotify",
+      "url": "https://open.spotify.com/artist/522ZyQMBe0xOfnJl9wWM4U"
+    },
+    {
+      "type": "Apple Music",
+      "url": "https://music.apple.com/us/artist/jody-dawkins/1520886678"
+    },
+    {
+      "type": "YouTube",
+      "url": "https://www.youtube.com/channel/UCsHFy8n7pQKf0feE0RxLNpQ/videos"
+    },
+    {
+      "type": "GitHub",
+      "url": "https://github.com/jodydawkins"
+    },
+    {
+      "type": "Instagram",
+      "url": "https://www.instagram.com/jody_dawkins/"
+    },
+    {
+      "type": "TikTok",
+      "url": "https://tiktok.com/@jody_dawkins"
+    }
+  ],
+  "signature": {
+    "algorithm": "ed25519",
+    "value": "Grem07CoHHF-aHQrjzPON4pLE0PHZxjcvn7wGPGc4eDrzX0xyIlBNNFV64DooVb_fpRUkr-d-NvRjJ9jpPAVBQ"
+  },
+  "subject": "key:sha256:r04mk-KJfvTnlnVSTUpnT283CGbHSWJkFMevj-G72Ts",
+  "type": "open-presence",
+  "version": "0.1"
+}
